@@ -1,7 +1,7 @@
 # app/api/v1/endpoints/execute.py
 from fastapi import APIRouter
-from schemas.job import ExecuteRequest, ExecuteResponse
-from services.execution_service import execute_code
+from sparkbricks.backend.fastapi_app.schemas.job import ExecuteRequest, ExecuteResponse
+from sparkbricks.backend.fastapi_app.services.execution_service import execute_code
 
 router = APIRouter()
 

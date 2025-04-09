@@ -1,5 +1,5 @@
 # app/core/cluster.py
-from dbx.client import db
+from sparkbricks.backend.fastapi_app.dbx.client import db
 
 
 def get_cluster_status(cluster_id: str):

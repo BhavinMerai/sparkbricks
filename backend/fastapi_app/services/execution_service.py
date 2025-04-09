@@ -1,6 +1,6 @@
 # app/services/execution_service.py
-from dbx.utils import submit_job_to_databricks
-from dbx.client import db
+from sparkbricks.backend.fastapi_app.dbx.utils import submit_job_to_databricks
+from sparkbricks.backend.fastapi_app.dbx.client import db
 
 
 def execute_code(user_email: str, code: str) -> int:

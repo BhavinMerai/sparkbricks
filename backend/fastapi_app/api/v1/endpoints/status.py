@@ -1,7 +1,7 @@
 # app/api/v1/endpoints/status.py
 from fastapi import APIRouter
-from schemas.job import StatusResponse
-from services.execution_service import get_run_status
+from sparkbricks.backend.fastapi_app.schemas.job import StatusResponse
+from sparkbricks.backend.fastapi_app.services.execution_service import get_run_status
 
 router = APIRouter()
 

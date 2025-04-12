@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Toolbar({ code, setOutput }) {
   const runCode = async () => {
     try {
-      const response = await axios.post("/api/execute", { code });
+      const response = await axios.post("/execute", { code });
       setOutput(response.data.output);
     } catch (error) {
       setOutput("Error running code");

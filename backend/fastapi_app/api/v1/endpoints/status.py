@@ -7,6 +7,6 @@ router = APIRouter()
 
 
 @router.get("/status/{run_id}", response_model=StatusResponse)
-def check_run_status(run_id: int):
+def check_run_status(run_id: str):
     status, output = get_run_status(run_id)
     return {"status": status, "output": output}

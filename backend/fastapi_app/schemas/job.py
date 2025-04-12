@@ -10,7 +10,7 @@ class ExecuteRequest(BaseModel):
 
 class ExecuteResponse(BaseModel):
     status: str
-    run_id: int
+    run_id: str
 
 
 class StatusResponse(BaseModel):

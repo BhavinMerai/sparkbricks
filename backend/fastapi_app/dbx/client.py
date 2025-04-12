@@ -4,6 +4,26 @@ from sparkbricks.backend.fastapi_app.core.config import DATABRICKS_INSTANCE, DAT
 
 if TEST_MODE:
     class MockDatabricksAPI:
+        def __init__(self):
+            self.jobs = self.MockJobs()
+            
+        class MockJobs:
+            def get_run(self, run_id):
+                print(f"Mocking jobs.get_run for {run_id}")
+                return {
+                    "state": {
+                        "life_cycle_state": "TERMINATED",
+                        "result_state": "SUCCESS"
+                    }
+                }
+                
+            def get_run_output(self, run_id):
+                print(f"Mocking jobs.get_run_output for {run_id}")
+                return {
+                    "logs": ["Mock execution log output"],
+                    "output": "Mock output"
+                }
+
         def __getattr__(self, name):
             def mock_method(*args, **kwargs):
                 print(f"Mocking Databricks API call: {name}()")
@@ -11,6 +31,12 @@ if TEST_MODE:
                     return MockCluster()
                 return {"status": "mock-success", "run_id": "mock-run-123"}
             return mock_method
+            
+        def get_run(self, run_id):
+            return self.jobs.get_run(run_id)
+            
+        def get_run_output(self, run_id):
+            return self.jobs.get_run_output(run_id)
 
     class MockCluster:
         def list_clusters(self):

@@ -7,7 +7,7 @@ def execute_code(user_email: str, code: str) -> int:
     return submit_job_to_databricks(code)
 
 
-def get_run_status(run_id: int):
+def get_run_status(run_id: str):
     try:
         status = db.jobs.get_run(run_id)
         life_cycle = status.get("state", {}).get("life_cycle_state")

@@ -2,59 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Kaggle-inspired color scheme */
+:root {
+  --kaggle-blue: #20beff;
+  --kaggle-dark: #2c2c2c;
+  --kaggle-light-bg: #f5f5f5;
+  --kaggle-cell-border: #e0e0e0;
+}
+
 body {
-  @apply bg-gray-950 text-white font-sans;
+  @apply bg-[var(--kaggle-light-bg)] text-gray-800 font-sans;
 }
 
-/* Sidebar */
-.sidebar {
-  @apply w-14 bg-gray-900 flex flex-col items-center py-4 border-r border-gray-800;
-}
-.sidebar button {
-  @apply bg-transparent border-none text-xl my-2 cursor-pointer hover:text-blue-400;
+/* Kaggle UI Components */
+.kaggle-sidebar {
+  @apply w-64 bg-[var(--kaggle-dark)] text-white p-4;
 }
 
-/* File Explorer */
-.file-explorer {
-  @apply w-48 bg-gray-900 text-white border-r border-gray-800 p-4;
-}
-.file-explorer h3 {
-  @apply text-sm font-semibold mb-2 text-gray-300;
-}
-.file-explorer ul {
-  @apply text-sm;
-}
-.file-explorer li {
-  @apply py-1 px-2 rounded hover:bg-gray-800 cursor-pointer;
+.kaggle-tab {
+  @apply px-4 py-2 text-gray-600;
 }
 
-/* Code Editor */
-.editor-container {
-  @apply p-2 h-full overflow-auto;
-}
-.code-cell {
-  @apply bg-gray-800 border border-gray-700 rounded-md p-4 mb-4 shadow-md;
-}
-textarea {
-  @apply w-full h-64 bg-gray-800 text-white text-sm border-none outline-none resize-none;
+.kaggle-tab-active {
+  @apply border-b-2 border-[var(--kaggle-blue)] text-[var(--kaggle-blue)];
 }
 
-/* Toolbar */
-.toolbar {
-  @apply flex justify-between items-center bg-gray-900 px-4 py-2 border-b border-gray-800;
+.kaggle-button {
+  @apply px-3 py-1 bg-[var(--kaggle-blue)] text-white rounded;
 }
 
-/* Output Panel */
-.output-panel {
-  @apply w-full h-full bg-black text-green-400 font-mono text-sm whitespace-pre-wrap overflow-auto rounded-md p-4;
+.kaggle-cell {
+  @apply mb-4 border border-[var(--kaggle-cell-border)] rounded-lg;
 }
 
-/* Resource Usage Panel (optional) */
-.resource-usage {
-  @apply text-xs text-gray-400 px-2 py-1;
+.kaggle-cell-toolbar {
+  @apply bg-[var(--kaggle-light-bg)] p-1;
 }
 
-/* Resize Handle (if used) */
-.resize-handle {
-  @apply w-1 bg-gray-700 cursor-col-resize;
+.kaggle-cell-output {
+  @apply bg-white p-3 border-t border-[var(--kaggle-cell-border)];
+}
+
+/* Notebook layout */
+.notebook-container {
+  @apply min-h-screen flex;
+}
+
+.notebook-content {
+  @apply flex-1 flex flex-col;
+}
+
+/* Code cells */
+.code-cell textarea {
+  @apply w-full font-mono text-sm p-2 border border-[var(--kaggle-cell-border)] rounded;
+}
+
+/* Output formatting */
+.cell-output pre {
+  @apply text-sm font-mono whitespace-pre-wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .kaggle-sidebar {
+    @apply w-14;
+  }
 }

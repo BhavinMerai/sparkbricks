@@ -1,26 +1,32 @@
-# app/services/execution_service.py
-from sparkbricks.backend.fastapi_app.dbx.utils import submit_job_to_databricks
-from sparkbricks.backend.fastapi_app.dbx.client import db
+from typing import Dict, Tuple
+import uuid
+import logging
 
+logger = logging.getLogger(__name__)
 
-def execute_code(user_email: str, code: str) -> int:
-    return submit_job_to_databricks(code)
+class CodeExecutionService:
+    def __init__(self):
+        # Mock configuration
+        self.mock_responses = {
+            "execute": {
+                "run_id": str(uuid.uuid4()),
+                "status": "RUNNING"
+            },
+            "status": {
+                "state": {
+                    "life_cycle_state": "TERMINATED",
+                    "result_state": "SUCCESS"
+                },
+                "output": "Mock execution completed successfully"
+            }
+        }
 
+    def execute_code(self, code: str, timeout: int = 30) -> Dict[str, str]:
+        """Mock execution of code"""
+        logger.info(f"Executing code: {code} with timeout: {timeout}")
+        return self.mock_responses["execute"]
 
-def get_run_status(run_id: str):
-    try:
-        status = db.jobs.get_run(run_id)
-        life_cycle = status.get("state", {}).get("life_cycle_state")
-        result_state = status.get("state", {}).get("result_state", "UNKNOWN")
-
-        if life_cycle in ["PENDING", "RUNNING"]:
-            return "RUNNING", None
-
-        if life_cycle == "TERMINATED":
-            output = db.jobs.get_run_output(run_id)
-            logs = output.get("logs", [])
-            return result_state, "".join(
-                logs) if logs else "No output available"
-    except Exception as e:
-        return "ERROR", f"Error fetching run status: {str(e)}"
-    return "UNKNOWN", "Status not found"
+    def get_run_status(self, run_id: str) -> Dict[str, str]:
+        """Mock getting the status of a run"""
+        logger.info(f"Getting status for run_id: {run_id}")
+        return self.mock_responses["status"]

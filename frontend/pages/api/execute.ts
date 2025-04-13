@@ -10,11 +10,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { code } = req.body;
 
     // Send code to Databricks API (Replace with actual Databricks API)
-    const databricksResponse = await axios.post("https://databricks-instance.com/api/execute", {
+    const fastapiResponse = await axios.post("http://localhost:8000/v1/execute", {
       code,
+      timeout: 30  // Default timeout in seconds
     });
 
-    res.status(200).json({ output: databricksResponse.data });
+    res.status(200).json(fastapiResponse.data);
   } catch (error) {
     res.status(500).json({ message: "Execution failed" });
   }

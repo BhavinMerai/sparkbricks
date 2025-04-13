@@ -57,18 +57,22 @@ export default function NotebookUI({ user }) {
     setOutput("");
 
     try {
-      const response = await fetch("/api/run", {
+      const response = await fetch("/api/execute", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code }),
+        body: JSON.stringify({ 
+          code,
+          timeout: 30  // Default timeout in seconds
+        }),
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP Error: ${response.status}`);
+        const errorData = await response.json();
+        throw new Error(errorData.message || `HTTP Error: ${response.status}`);
       }
 
       const data = await response.json();
-      setOutput(data.output);
+      setOutput(data.result || data.output);
     } catch (error) {
       setOutput(`Error: ${error.message}`);
     } finally {

@@ -1,48 +1,82 @@
-import { signIn, useSession } from "next-auth/react";
-import { useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
-import { FaGoogle, FaGithub } from "react-icons/fa";
+import { useAuth } from "../context/AuthContext";
 
 export default function AuthPage() {
-  const { data: session } = useSession();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLogin, setIsLogin] = useState(true);
+  const [error, setError] = useState("");
   const router = useRouter();
+  const { login } = useAuth(); // ✅ use context method
 
-  useEffect(() => {
-    console.log("Session Data:", session);
-    if (session) {
-      router.push("/"); // Redirect to homepage if logged in
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const endpoint = isLogin ? "/login/" : "/signup/";
+
+    try {
+      const res = await fetch(`http://localhost:8000${endpoint}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username: email, password }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || "Failed to authenticate");
+        return;
+      }
+
+      login(data.access, email); // ✅ use context to update global state
+
+      router.push("/");
+    } catch (err) {
+      console.error("Login network error:", err);
+      setError("Network error");
     }
-  }, [session]);
+  };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-6">
-      <div className="bg-gray-800 shadow-md rounded-lg p-8 max-w-sm w-full text-center">
-        <h2 className="text-2xl font-bold mb-4">Sign In / Sign Up</h2>
-        <p className="text-gray-400 mb-6">Choose a sign-in method:</p>
+    <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-gray-800 p-6 rounded-md w-full max-w-md"
+      >
+        <h2 className="text-xl font-bold mb-4">{isLogin ? "Sign In" : "Sign Up"}</h2>
 
-        <button
-          onClick={() => signIn("google")}
-          className="flex items-center justify-center gap-3 w-full bg-red-500 text-white px-4 py-2 rounded-md mb-3"
-        >
-          <FaGoogle /> Sign in with Google
+        {error && <p className="text-red-500 mb-2">{error}</p>}
+
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full mb-3 p-2 rounded text-black"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="w-full mb-4 p-2 rounded text-black"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+
+        <button type="submit" className="w-full bg-blue-600 py-2 rounded hover:bg-blue-500">
+          {isLogin ? "Login" : "Signup"}
         </button>
 
         <button
-          onClick={() => signIn("github")}
-          className="flex items-center justify-center gap-3 w-full bg-gray-800 text-white px-4 py-2 rounded-md mb-3"
+          type="button"
+          onClick={() => setIsLogin(!isLogin)}
+          className="mt-4 text-sm text-gray-300 underline"
         >
-          <FaGithub /> Sign in with GitHub
+          {isLogin ? "Create an account" : "Already have an account?"}
         </button>
-
-        <hr className="my-4 border-gray-600" />
-
-        <button
-          onClick={() => signIn("credentials")}
-          className="w-full bg-blue-500 text-white px-4 py-2 rounded-md"
-        >
-          Sign in with Email
-        </button>
-      </div>
+      </form>
     </div>
   );
 }

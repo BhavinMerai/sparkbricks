@@ -1,6 +1,20 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useAuth } from '../context/AuthContext'; // ✅ Import the context
 
 export default function SparkBricksNavbar() {
+  const router = useRouter();
+  const { userEmail, logout } = useAuth(); // ✅ Use context values
+
+  const handleSignIn = () => {
+    router.push("/auth");
+  };
+
+  const handleLogout = () => {
+    logout();
+    router.push("/"); // Optionally redirect to home
+  };
+
   return (
     <nav className="bg-blue-800 text-white shadow-lg">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -16,9 +30,24 @@ export default function SparkBricksNavbar() {
           </div>
         </div>
         <div className="flex items-center space-x-4">
-          <button className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">
-            Sign In
-          </button>
+          {userEmail ? (
+            <>
+              <span className="text-sm">Hi, {userEmail}</span>
+              <button
+                onClick={handleLogout}
+                className="bg-red-600 px-4 py-2 rounded hover:bg-red-700"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <button
+              onClick={handleSignIn}
+              className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Sign In
+            </button>
+          )}
         </div>
       </div>
     </nav>

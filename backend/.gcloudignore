@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+.Python
+env/
+venv/
+.env
+
+# macOS
+.DS_Store
+
+# Git
+.git
+.gitignore

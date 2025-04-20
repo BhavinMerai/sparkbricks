@@ -1,7 +1,7 @@
 from django.contrib import admin
-from django.urls import path, include  # ✅ include added here
+from django.urls import path, include  # ✅ Make sure include is imported
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("core.urls")),  # ✅ This line uses include()
+    path('', include('core.urls')),  # ✅ This line makes `/signup/`, `/login/` work
 ]

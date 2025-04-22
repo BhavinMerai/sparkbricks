@@ -4,7 +4,7 @@ from typing import Optional
 
 
 class ExecuteRequest(BaseModel):
-    user_email: str
+    user_email: Optional[str] = None
     code: str
 
 

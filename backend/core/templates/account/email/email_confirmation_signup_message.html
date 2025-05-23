@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f7;
+      margin: 0;
+      padding: 20px;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .header {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .header h2 {
+      color: #2e86de;
+      margin: 0;
+    }
+    .content {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #2e86de;
+      color: rgb(3, 233, 99);
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="header">
+      <h2>Confirm Your Email</h2>
+    </div>
+    <div class="content">
+      <p>Hi {{ user.email }},</p>
+      <p>Thank you for signing up. Please confirm your email address by clicking the button below:</p>
+      <p><a href="{{ activate_url }}" class="button">Confirm Email</a></p>
+      <p>If you did not sign up for this account, you can ignore this email.</p>
+    </div>
+    <div class="footer">
+      &copy; {{ current_year }} sparkbrick.com — All rights reserved.
+    </div>
+  </div>
+</body>
+</html>

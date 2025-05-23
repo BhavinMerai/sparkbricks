@@ -1,0 +1,423 @@
+(venv) PS C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend> Get-ChildItem -Recurse -Depth 3
+>> 
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        06/05/2025     21:58                core
+d-----        16/04/2025     11:49                django_auth
+d-----        14/04/2025     19:41                fastapi_app
+d-----        19/04/2025     22:33                static
+d-----        16/04/2025     11:28                venv
+d-----        14/04/2025     19:41                __pycache__
+-a----        19/04/2025     22:30            112 .gcloudignore
+-a----        19/04/2025     22:29            225 app.yaml
+-a----        06/05/2025     18:27         221184 db.sqlite3
+-a----        20/04/2025     12:03            159 main.py
+-a----        16/04/2025     11:47            689 manage.py
+-a----        19/04/2025     12:32            738 requirements.txt
+-a----        14/04/2025     19:41             34 __init__.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\core
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        16/04/2025     12:08                migrations
+d-----        06/05/2025     23:01                __pycache__
+-a----        16/04/2025     11:49             66 admin.py
+-a----        16/04/2025     11:49            146 apps.py
+-a----        16/04/2025     11:49             60 models.py
+-a----        07/05/2025     17:41            855 serializers.py
+-a----        16/04/2025     11:49             63 tests.py
+-a----        06/05/2025     19:18            314 urls.py
+-a----        06/05/2025     19:20            324 views.py
+-a----        16/04/2025     11:49              0 __init__.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\core\migrations
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        16/04/2025     12:08                __pycache__
+-a----        16/04/2025     11:49              0 __init__.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\core\migrations\__pycache__
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        16/04/2025     12:08            187 __init__.cpython-313.pyc
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\core\__pycache__
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        06/05/2025     19:22            220 admin.cpython-313.pyc
+-a----        06/05/2025     19:22            536 apps.cpython-313.pyc
+-a----        06/05/2025     19:22            217 models.cpython-313.pyc
+-a----        06/05/2025     23:01           1697 serializers.cpython-313.pyc
+-a----        06/05/2025     19:22            176 __init__.cpython-313.pyc
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\django_auth
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        06/05/2025     23:04                __pycache__
+-a----        16/04/2025     11:47            415 asgi.py
+-a----        06/05/2025     23:03           3420 settings.py
+-a----        06/05/2025     18:09            423 urls.py
+-a----        16/04/2025     11:47            415 wsgi.py
+-a----        16/04/2025     11:47              0 __init__.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\django_auth\__pycache__
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        06/05/2025     23:04           3346 settings.cpython-313.pyc
+-a----        06/05/2025     18:09            660 urls.cpython-313.pyc
+-a----        16/04/2025     12:08            679 wsgi.cpython-313.pyc
+-a----        16/04/2025     11:49            183 __init__.cpython-313.pyc
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        14/04/2025     19:41                api
+d-----        14/04/2025     19:41                core
+d-----        14/04/2025     19:41                dbx
+d-----        14/04/2025     19:41                schemas
+d-----        14/04/2025     19:41                services
+d-----        14/04/2025     19:41                __pycache__
+-a----        14/04/2025     19:41            132 dependencies.py
+-a----        14/04/2025     19:41            704 main.py
+-a----        14/04/2025     19:41            448 main_temp.py
+-a----        14/04/2025     19:41            180 requirements.txt
+-a----        14/04/2025     19:41            245 setup.py
+-a----        14/04/2025     19:41             45 __init__.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\api
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        14/04/2025     19:41                v1
+d-----        14/04/2025     19:41                __pycache__
+-a----        14/04/2025     19:41              0 __init__.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\api\v1
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        14/04/2025     19:41                endpoints
+d-----        14/04/2025     19:41                __pycache__
+-a----        14/04/2025     19:41              0 __init__.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\api\__pycache__
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        14/04/2025     19:41            191 __init__.cpython-313.pyc
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\core
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        14/04/2025     19:41                __pycache__
+-a----        14/04/2025     19:41            747 auth.py
+-a----        14/04/2025     19:41            724 cluster.py
+-a----        14/04/2025     19:41            781 config.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\core\__pycache__
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        14/04/2025     19:41           1481 auth.cpython-313.pyc
+-a----        14/04/2025     19:41           1390 cluster.cpython-313.pyc
+-a----        14/04/2025     19:41            999 config.cpython-313.pyc
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\dbx
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        14/04/2025     19:41                __pycache__
+-a----        14/04/2025     19:41           1727 client.py
+-a----        14/04/2025     19:41            732 utils.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\dbx\__pycache__
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        14/04/2025     19:41           3072 client.cpython-313.pyc
+-a----        14/04/2025     19:41           1253 utils.cpython-313.pyc
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\schemas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        14/04/2025     19:41                __pycache__
+-a----        14/04/2025     19:41            319 job.py
+-a----        14/04/2025     19:41              0 __init__.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\schemas\__pycache__
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        14/04/2025     19:41           1070 job.cpython-313.pyc
+-a----        14/04/2025     19:41            195 __init__.cpython-313.pyc
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\services
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        14/04/2025     19:41                __pycache__
+-a----        14/04/2025     19:41           1068 execution_service.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\services\__pycache__
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        14/04/2025     19:41           1910 execution_service.cpython-313.pyc
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\fastapi_app\__pycache__
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        14/04/2025     19:41            441 dependencies.cpython-313.pyc
+-a----        14/04/2025     19:41           1032 main.cpython-313.pyc
+-a----        14/04/2025     19:41            187 __init__.cpython-313.pyc
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\static
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        19/04/2025     22:33                admin
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\static\admin
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        19/04/2025     22:33                css
+d-----        19/04/2025     22:33                img
+d-----        19/04/2025     22:33                js
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\static\admin\css
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        19/04/2025     22:33                vendor
+-a----        19/04/2025     22:33           9185 autocomplete.css
+-a----        19/04/2025     22:33          22154 base.css
+-a----        19/04/2025     22:33           6878 changelists.css
+-a----        19/04/2025     22:33           2808 dark_mode.css
+-a----        19/04/2025     22:33            441 dashboard.css
+-a----        19/04/2025     22:33           8525 forms.css
+-a----        19/04/2025     22:33            951 login.css
+-a----        19/04/2025     22:33           2810 nav_sidebar.css
+-a----        19/04/2025     22:33          16632 responsive.css
+-a----        19/04/2025     22:33           1991 responsive_rtl.css
+-a----        19/04/2025     22:33           4772 rtl.css
+-a----        19/04/2025     22:33            663 unusable_password_field.css
+-a----        19/04/2025     22:33          11991 widgets.css
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\static\admin\img
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        19/04/2025     22:33                gis
+-a----        19/04/2025     22:33           2455 calendar-icons.svg
+-a----        19/04/2025     22:33            331 icon-addlink.svg
+-a----        19/04/2025     22:33            504 icon-alert.svg
+-a----        19/04/2025     22:33           1086 icon-calendar.svg
+-a----        19/04/2025     22:33            380 icon-changelink.svg
+-a----        19/04/2025     22:33            677 icon-clock.svg
+-a----        19/04/2025     22:33            392 icon-deletelink.svg
+-a----        19/04/2025     22:33            784 icon-hidelink.svg
+-a----        19/04/2025     22:33            560 icon-no.svg
+-a----        19/04/2025     22:33            655 icon-unknown-alt.svg
+-a----        19/04/2025     22:33            655 icon-unknown.svg
+-a----        19/04/2025     22:33            581 icon-viewlink.svg
+-a----        19/04/2025     22:33            436 icon-yes.svg
+-a----        19/04/2025     22:33            537 inline-delete.svg
+-a----        19/04/2025     22:33           1081 LICENSE
+-a----        19/04/2025     22:33            321 README.txt
+-a----        19/04/2025     22:33            458 search.svg
+-a----        19/04/2025     22:33           3291 selector-icons.svg
+-a----        19/04/2025     22:33           1097 sorting-icons.svg
+-a----        19/04/2025     22:33            331 tooltag-add.svg
+-a----        19/04/2025     22:33            280 tooltag-arrowright.svg
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\static\admin\js
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        19/04/2025     22:33                admin
+d-----        19/04/2025     22:33                vendor
+-a----        19/04/2025     22:33           8076 actions.js
+-a----        19/04/2025     22:33           1060 autocomplete.js
+-a----        19/04/2025     22:33           9141 calendar.js
+-a----        19/04/2025     22:33            884 cancel.js
+-a----        19/04/2025     22:33            606 change_form.js
+-a----        19/04/2025     22:33           6208 core.js
+-a----        19/04/2025     22:33            978 filters.js
+-a----        19/04/2025     22:33          15628 inlines.js
+-a----        19/04/2025     22:33            347 jquery.init.js
+-a----        19/04/2025     22:33           3063 nav_sidebar.js
+-a----        19/04/2025     22:33            532 popup_response.js
+-a----        19/04/2025     22:33           1531 prepopulate.js
+-a----        19/04/2025     22:33            586 prepopulate_init.js
+-a----        19/04/2025     22:33           4530 SelectBox.js
+-a----        19/04/2025     22:33          15709 SelectFilter2.js
+-a----        19/04/2025     22:33           1653 theme.js
+-a----        19/04/2025     22:33           1480 unusable_password_field.js
+-a----        19/04/2025     22:33           7887 urlify.js
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\venv
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        16/04/2025     11:28                Include
+d-----        16/04/2025     11:28                Lib
+d-----        16/04/2025     12:28                Scripts
+-a----        06/05/2025     18:00             71 .gitignore
+-a----        06/05/2025     18:00            268 pyvenv.cfg
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\venv\Lib
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        06/05/2025     18:15                site-packages
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\venv\Lib\site-packages
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        06/05/2025     18:15                allauth
+d-----        16/04/2025     11:30                asgiref
+d-----        16/04/2025     11:30                asgiref-3.8.1.dist-info
+d-----        16/04/2025     12:28                certifi
+d-----        16/04/2025     12:28                certifi-2025.1.31.dist-info
+d-----        16/04/2025     12:28                charset_normalizer
+d-----        16/04/2025     12:28                charset_normalizer-3.4.1.dist-info
+d-----        16/04/2025     12:28                coreapi
+d-----        16/04/2025     12:28                coreapi-2.3.3.dist-info
+d-----        16/04/2025     12:28                coreschema
+d-----        16/04/2025     12:28                coreschema-0.0.4.dist-info
+d-----        17/04/2025     12:57                corsheaders
+d-----        16/04/2025     11:30                django
+d-----        16/04/2025     11:31                Django-5.2.dist-info
+d-----        16/04/2025     11:31                djangorestframework-3.16.0.dist-info
+d-----        16/04/2025     11:31                djangorestframework_simplejwt-5.5.0.dist-info
+d-----        06/05/2025     18:16                django_allauth-65.7.0.dist-info
+d-----        17/04/2025     12:57                django_cors_headers-4.7.0.dist-info
+d-----        06/05/2025     18:12                dj_rest_auth
+d-----        06/05/2025     18:12                dj_rest_auth-7.0.1.dist-info
+d-----        16/04/2025     12:28                idna
+d-----        16/04/2025     12:28                idna-3.10.dist-info
+d-----        16/04/2025     12:28                itypes-1.2.0.dist-info
+d-----        16/04/2025     12:28                jinja2
+d-----        16/04/2025     12:28                jinja2-3.1.6.dist-info
+d-----        16/04/2025     11:30                jwt
+d-----        16/04/2025     12:28                markupsafe
+d-----        16/04/2025     12:28                MarkupSafe-3.0.2.dist-info
+d-----        16/04/2025     11:28                pip
+d-----        16/04/2025     11:28                pip-24.3.1.dist-info
+d-----        16/04/2025     11:30                PyJWT-2.9.0.dist-info
+d-----        16/04/2025     12:28                requests
+d-----        16/04/2025     12:28                requests-2.32.3.dist-info
+d-----        16/04/2025     11:31                rest_framework
+d-----        16/04/2025     11:31                rest_framework_simplejwt
+d-----        16/04/2025     11:30                sqlparse
+d-----        16/04/2025     11:30                sqlparse-0.5.3.dist-info
+d-----        16/04/2025     11:30                tzdata
+d-----        16/04/2025     11:30                tzdata-2025.2.dist-info
+d-----        16/04/2025     12:28                uritemplate
+d-----        16/04/2025     12:28                uritemplate-4.1.1.dist-info
+d-----        16/04/2025     12:28                urllib3
+d-----        16/04/2025     12:28                urllib3-2.4.0.dist-info
+d-----        16/04/2025     12:28                __pycache__
+-a----        16/04/2025     12:28           5655 itypes.py
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\venv\Scripts
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        06/05/2025     18:01           2252 activate
+-a----        06/05/2025     18:01           1043 activate.bat
+-a----        06/05/2025     18:01           2302 activate.fish
+-a----        04/02/2025     16:38          27969 Activate.ps1
+-a----        04/02/2025     16:37            393 deactivate.bat
+-a----        16/04/2025     11:31         108485 django-admin.exe
+-a----        16/04/2025     12:28         108448 normalizer.exe
+-a----        16/04/2025     11:28         108443 pip.exe
+-a----        16/04/2025     11:28         108443 pip3.13.exe
+-a----        16/04/2025     11:28         108443 pip3.exe
+-a----        04/02/2025     16:38         254832 python.exe
+-a----        04/02/2025     16:38         251248 pythonw.exe
+-a----        16/04/2025     11:30         108438 sqlformat.exe
+
+
+    Directory: C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend\__pycache__
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        14/04/2025     19:41            175 __init__.cpython-313.pyc
+
+
+(venv) PS C:\Users\admin\Desktop\Front-End\new-front\sparkbricks\backend> 

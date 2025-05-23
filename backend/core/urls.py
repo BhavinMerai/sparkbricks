@@ -1,10 +1,8 @@
 from django.urls import path
-from rest_framework_simplejwt.views import TokenRefreshView
-from .views import SignupView, LoginView, LogoutView
+from .views import ProtectedView, UserProfileView, test_email
 
 urlpatterns = [
-    path('signup/', SignupView.as_view(), name='signup'),
-    path('login/', LoginView.as_view(), name='login'),
-    path('logout/', LogoutView.as_view(), name='logout'),
-    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('protected/', ProtectedView.as_view(), name='protected-view'),
+    path('profile/', UserProfileView.as_view(), name='user-profile'),
+    path('test-email/', test_email, name='test-email'),  # SMTP test route
 ]

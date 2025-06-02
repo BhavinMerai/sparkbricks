@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAuth } from '../context/AuthContext'; // ✅ Import the context
+import UserProfileCard from './UserProfileCard'; // Import UserProfileCard
 
 export default function SparkBricksNavbar() {
   const router = useRouter();
@@ -32,7 +33,7 @@ export default function SparkBricksNavbar() {
         <div className="flex items-center space-x-4">
           {userEmail ? (
             <>
-              <span className="text-sm">Hi, {userEmail}</span>
+              <UserProfileCard /> {/* Add UserProfileCard here */}
               <button
                 onClick={handleLogout}
                 className="bg-red-600 px-4 py-2 rounded hover:bg-red-700"
